@@ -16,7 +16,7 @@ A powerful router based on client-side routing
 
 [Documentation repo](https://github.com/ch3ber/yourRouter-docs)
 
-[Documentation website](https://ch3ber.github.io/yourRouter-docs)
+[Documentation website](https://ch3ber.github.io/yourRouter)
 
 
 ## Installation
