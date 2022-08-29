@@ -1,41 +1,37 @@
-# Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+![Logo](./static/img/full-logo.png)
 
-### Installation
 
-```
-$ yarn
-```
+# yourRouter
 
-### Local Development
+A powerful router based on client-side routing
 
-```
-$ yarn start
-```
+## Features
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+- Support for dynamic routes
+- Doesn't reload the page
+- Full typescript support
 
-### Build
+## Documentation
 
-```
-$ yarn build
-```
+[Documentation repo](https://github.com/ch3ber/yourRouter-docs)
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+[Documentation website](https://ch3ber.github.io/yourRouter-docs)
 
-### Deployment
 
-Using SSH:
+## Installation
 
-```
-$ USE_SSH=true yarn deploy
+Install my-project with npm
+
+```bash
+  npm i -D yourrouter
 ```
 
-Not using SSH:
+## Feedback
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+If you have any feedback, please reach out to us at @ch3ber_dev on twitter
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## Authors
+
+- [@ch3ber](https://www.github.com/ch3ber)
