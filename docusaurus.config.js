@@ -65,7 +65,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'getting-started/fast-setup',
             position: 'left',
             label: 'Docs',
           },
@@ -85,19 +85,19 @@ const config = {
             items: [
               {
                 label: 'Get Started',
-                to: '/docs/getstarted',
+                to: '/docs/getting-started/fast-setup',
               },
               {
                 label: 'Installation',
-                to: '/docs/install',
+                to: '/docs/getting-started/installation',
               },
               {
                 label: 'API',
-                to: '/docs/api',
+                to: '/docs/category/api',
               },
               {
                 label: 'Examples',
-                to: '/docs/examples',
+                to: '/docs/category/examples',
               },
             ],
           },
