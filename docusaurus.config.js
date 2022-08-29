@@ -9,7 +9,7 @@ const config = {
   title: 'YourRouter',
   tagline: 'Your client-side router',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/yourRouter/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
