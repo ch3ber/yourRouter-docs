@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'YourRouter',
   tagline: 'Your client-side router',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://ch3ber.github.io',
   baseUrl: '/yourRouter/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -71,7 +71,7 @@ const config = {
           },
           {href: 'https://ch3ber.github.io', label: 'Creator', position: 'left'},
           {
-            href: 'https://github.com/ch3ber/youRouter',
+            href: 'https://github.com/ch3ber/yourRouter',
             label: 'GitHub',
             position: 'right',
           },
@@ -119,7 +119,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/ch3ber/youRouter',
+                href: 'https://github.com/ch3ber/yourRouter',
               },
             ],
           },
