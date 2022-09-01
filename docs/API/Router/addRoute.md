@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 # addRoute
 
 Add a new route to your app. If you want to render a template when the route is loaded you must return a funtion that returns your template.
