@@ -10,30 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: 'Client-side',
+    Svg: require('@site/static/img/undraw_mobile_browsers_re_kxol.svg').default,
+    description: (
+      <>
+        A powerful router based on client-side routing.
+      </>
+    ),
+  },
+  {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/undraw_check_boxes_re_v40f.svg').default,
     description: (
       <>
-        A powerful router based on client-side routing. Create routes on your web page quickly.
+        Create routes on your web page quickly.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Powered by typescript',
+    Svg: require('@site/static/img/undraw_outer_space_re_u9vd.svg').default,
     description: (
       <>
-        A powerful router based on client-side routing. Create routes on your web page quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Full typescript support.
       </>
     ),
   },
