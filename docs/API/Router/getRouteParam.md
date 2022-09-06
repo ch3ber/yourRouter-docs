@@ -13,6 +13,7 @@ import { Router } from 'yourrouter'
 const router = Router.getInstance()
 
 const DynamicRoute = () => {
+  // highlight-next-line
   const param = router.getRouteParam()
   const view = `<p>The route param is: ${param}</p>`
   return view
@@ -22,7 +23,7 @@ const DynamicRoute = () => {
 ## Use example
 Complete example of how to use the getRouteParam method.
 
-For this example the dynamic route is `/product/:id` and your current path is `/product/AFZ2LS8` the expected outpud of getRouteParam method is `AFZ2LS8`.
+For this example the dynamic route is `/product/:id` and your current path is `/product/AFZ2LS8` the expected output of getRouteParam method is `AFZ2LS8`.
 
 ### Create config
 Create the config for your router
@@ -44,6 +45,7 @@ import { Router } from 'yourrouter'
 const router = Router.getInstance()
 
 const DynamicRoute = () => {
+  // highlight-next-line
   const param = router.getRouteParam()
   const view = `
     <main>
