@@ -3,14 +3,17 @@ sidebar_position: 2
 ---
 
 # Installation
+
 Fast and easy installation
 
-### NPM dependencie
+### NPM dependencies
+
 ```bash
 npm i yourrouter
 ```
 
-### NPM devDependencie
+### NPM devDependencies
+
 ```bash
 npm i -D yourrouter
 ```
