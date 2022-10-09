@@ -14,9 +14,11 @@ A powerful router based on client-side routing
 
 ## Documentation
 
-[Documentation repo](https://github.com/ch3ber/yourRouter-docs)
+- [Documentation repo](https://github.com/ch3ber/yourRouter-docs)
 
-[Documentation website](https://ch3ber.github.io/yourRouter)
+- [Documentation website](https://ch3ber.github.io/yourRouter)
+
+- [Contribution guideline](./CONTRIBUTING.md)
 
 
 ## Installation
@@ -24,8 +26,12 @@ A powerful router based on client-side routing
 Install my-project with npm
 
 ```bash
-  npm i yourrouter
+  npm i yourRouter
 ```
+
+## Technologies
+- Typescript ![Typescript](https://img.shields.io/badge/-Typescript-000000?style=flat&logo=typescript
+- [Docusaurus](https://https://docusaurus.io/) ![Docusaurus](https://img.shields.io/badge/-Docusaurus-000000?style=flat&logo=Docusaurus
 
 ## Feedback
 
