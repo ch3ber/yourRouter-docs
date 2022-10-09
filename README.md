@@ -30,8 +30,8 @@ Install my-project with npm
 ```
 
 ## Technologies
-- Typescript
-- [Docusaurus](https://https://docusaurus.io/) 
+- Typescript ![Typescript](https://img.shields.io/badge/-Typescript-000000?style=flat&logo=typescript
+- [Docusaurus](https://https://docusaurus.io/) ![Docusaurus](https://img.shields.io/badge/-Docusaurus-000000?style=flat&logo=Docusaurus
 
 ## Feedback
 
