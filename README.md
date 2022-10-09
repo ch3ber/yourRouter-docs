@@ -63,7 +63,7 @@ Router.createInstance({
 ```
 ### path404
 Name of route with 404 HTTP status code.
-- [Contribution guideline](./CONTRIBUTING.md)### renderId
+### renderId
 Id where the templates will be rendered. Use #app to id and .app to css class.
 ## Use the router
 
