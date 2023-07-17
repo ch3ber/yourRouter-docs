@@ -1,153 +1,167 @@
+![Logo](https://github.com/ch3ber/yourRouter/blob/main/docs/img/full-logo.png?raw=true)
 
-![Logo](./static/img/full-logo.png)
+# What is yourrouter? 🤔
+
+A powerful router based on client-side routing.
 
 
-# yourRouter
+# Features 🚀
 
-A powerful router based on client-side routing
-
-## Features
-
-- Support for dynamic routes
 - Doesn't reload the page
+- Support for dynamic routes
+- Support template rendering
+- Redirection without reloading the page
+- Bundle with 0 dependencies
 - Full typescript support
 
-## Documentation
+# Working on new features 🛠️
 
-[Documentation repo](https://github.com/ch3ber/yourRouter-docs)
+- Support for query params
+- Documentation with project examples
 
-[Documentation website](https://ch3ber.github.io/yourRouter)
+# Documentation 📝
 
+- [Documentation website](https://ch3ber.github.io/yourRouter)
+- [Documentation repo](https://github.com/ch3ber/yourRouter-docs)
 
-# Installation
-### NPM dependencies
+# Quick Setup ⏱️
+
+Start with the quick configuration of yourrouter. See the full documentation **[here](https://ch3ber.github.io/yourRouter)**
+
+### Installation
 
 ```bash
-npm i yourrouter
+  npm i yourrouter
 ```
-
-### NPM devDependencies
 
 ```bash
-npm i -D yourrouter
+  pnpm add yourrouter
 ```
 
-## Technologies
-<a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://img.icons8.com/color/452/typescript.png" alt="Typescript" width="40" height="40"/> </a>
-<a href="https://docusaurus.io/" target="_blank"> <img src="https://d33wubrfki0l68.cloudfront.net/ea8e37a6a30e9c260a8936d95c579af4a2dd3df7/6ee7e/img/docusaurus_keytar.svg" alt="Typescript" width="40" height="40"/> </a>
+```bash
+  yarn add yourrouter
+```
 
-
-
-
-# Quick Setup
-
-Start with the quick configuration of yourrouter.
-
-## Import yourrouter
+### Import yourrouter
 
 Import yourrouter to your index file.
 
-```js title="src/index.js"
-import { Router } from "yourrouter";
+```js
+// src/index.js
+
+import Router from "yourrouter";
 ```
 
-## Set your configuration
+### Set your configuration
 
-Set the configuration of your Router to start creating routes using `createInstance()` method.
+Set the configuration of your Router to start creating routes using `create()` method.
 
-```js title="src/index.js"
-Router.createInstance({
-  path404: "/notFound", // name of route with 404 HTTP status code
-  renderId: "#app", // Id where the templates will be rendered
+```js
+// src/index.js
+
+Router.create({
+  path404: "/notFound",
+  renderId: "#app",
 });
 ```
-### path404
+
+**path404**
 Name of route with 404 HTTP status code.
-### renderId
-Id where the templates will be rendered. Use #app to id and .app to css class.
-## Use the router
 
-"Router" use the singleton pattern, you can get the instance of your Router with your config options in any file using getInstance() method.
+**renderId**
+Optional id where the templates will be rendered. `renderId` use `document.querySelector()` to find the id, you can use `#app` in your html file to select an id or `.app` to css class.
 
-```js title="src/index.js"
-const router = Router.getInstance();
-```
+### Execute code in a route
 
-## Render a route
+```js
+// src/index.js
 
-Print the content of your route in the HTML.
+import Router from "yourrouter";
 
-### Without template rendering
-
-You chose how to render the content.
-
-```js title="src/index.js"
-import { Router } from "yourrouter";
-
-Router.createInstance({
+const config = {
   path404: "/notFound",
-});
-const router = Router.getInstance();
+};
+
+const router = Router.create(config);
 
 router.addRoute("/", () => {
-  console.log("Hello home page");
+  console.log("welcome to the main route!");
+});
 
-  // highlight-start
-  // render the route content
-  document.querySelector("body").innerHTML = "<p>Home page!</p>";
-  // highlight-end
+router.addRoute("/foo", () => {
+  console.log("welcome to the foo route!");
 });
 ```
 
-### With template rendering
+### Get the Router instance
 
-You can use yourrouter's template rendering support by defining the "renderId" in your configuration.
+You can get the instance of your Router in any file using the `get()` method.
 
-```js title="src/index.js"
-import { Router } from "yourrouter";
+```js title="
+// src/pages/about/index.js"
 
-Router.createInstance({
+const router = Router.get();
+```
+
+# Template rendering 🏭
+
+Render the content of your route in the HTML. You should return a funtion into addRoute callback, this function can be sync or async and should return the template to render in the document.
+
+_Note: To active the template rendering you should set the `renderId` in your Router config._
+
+```js
+// src/index.js
+
+import Router from "yourrouter";
+
+const router = Router.create({
   path404: "/notFound",
-  // highlight-start
-  // important to enable template rendering
   renderId: "#app", // use #app to id and .app to css class
-  // highlight-end
 });
-const router = Router.getInstance();
 
 router.addRoute("/", () => {
   console.log("Hello home page");
 
-  // highlight-next-line
-  return () => "<p>Home page!</p>"; // you must return a function
+  return () => "<p>Home page!</p>"; // function to that return's the teamplate to render in your page
 });
 ```
 
-Add a new route to your app
+### Example with template rendering disable
 
-[addRoute](./docs/API/Router/addRoute.md)
+```js
+// src/index.js
 
-[getRouteParam](./docs/API/Router/getRouteParam.md)
+import Router from "yourrouter";
 
-[redirectTo](./docs/API/Router/redirectTo.md)
+const router = Router.create({
+  path404: "/notFound",
+});
 
+router.addRoute("/", () => {
+  console.log("Hello home page");
 
+  // render the content in the #app element
+  document.querySelector("#app").innerHTML = "<p>Home page!</p>";
+});
+```
 
-# Examples list
-## Devstore
-SPA created without javascript frameworks
+# Examples list ✅
+
+### Devstore
+
+E-commerce SPA with template rendering, created without javascript frameworks.
 
 - Repo: https://github.com/ch3ber/devstore
 - Live demo: https://ch3ber-devstore.netlify.app
 
-## Feedback
-
-If you have any feedback, please reach out to us at @ch3ber_dev on twitter
-
-## Contributing
+# Contributing 🤝
 
 [Contribution guideline](./CONTRIBUTING.md)
 
-## Authors
+# Feedback 📣
+
+If you have any feedback, please reach out to us at @ch3ber_dev on twitter
+
+# Authors 👥
 
 - [@ch3ber](https://www.github.com/ch3ber)
