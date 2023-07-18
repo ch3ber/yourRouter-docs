@@ -33,11 +33,26 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          lastVersion: 'current',
+          versions: {
+            'canary': {
+              label: 'Canary 🚧',
+              path: 'next',
+              banner: 'unreleased'
+            },
+            current: {
+              label: '2.0.2',
+            },
+            '1.1.2': {
+              label: '1.1.2',
+              path: '1.1.2',
+            }
+          },
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ch3ber/yourRouter-docs/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -58,18 +73,25 @@ const config = {
     ({
       navbar: {
         title: 'Your Router',
+        hideOnScroll: true,
         logo: {
           alt: 'Your Router Logo',
-          src: 'img/logo-small.png',
+          src: 'img/logo.svg',
         },
         items: [
           {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownItemsAfter: [{ to: '/versions', label: 'All versions' }],
+            dropdownActiveClassDisabled: true,
+          },
+          {
             type: 'doc',
-            docId: 'getting-started/quick-setup',
+            docId: 'Introduction',
             position: 'left',
             label: 'Docs',
           },
-          {href: 'https://ch3ber.github.io', label: 'Creator', position: 'left'},
+          { href: 'https://ch3ber.github.io', label: 'Creator', position: 'left' },
           {
             href: 'https://github.com/ch3ber/yourRouter',
             label: 'GitHub',
@@ -84,12 +106,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Get Started',
-                to: '/docs/getting-started/quick-setup',
+                label: 'Quick Setup',
+                to: '/docs/quick-setup',
               },
               {
-                label: 'Installation',
-                to: '/docs/getting-started/installation',
+                label: 'Get Started',
+                to: '/docs/getting-started/installation'
               },
               {
                 label: 'API',
@@ -121,10 +143,20 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/ch3ber/yourRouter',
               },
+              {
+                label: 'NPM',
+                href: 'https://www.npmjs.com/package/yourrouter',
+              },
             ],
           },
         ],
-        copyright: `Open Source Project.`,
+        logo: {
+          alt: 'Eber Alejo @ch3ber Logo',
+          src: 'img/ch3ber-logo.png',
+          href: 'https://ch3ber.github.io',
+          width: 250,
+        },
+        copyright: `ch3ber - Open Source Project.`,
       },
       prism: {
         theme: lightCodeTheme,
