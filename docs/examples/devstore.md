@@ -1,6 +1,4 @@
-# Examples list
-
-## Devstore
+# Devstore
 
 E-commerce SPA with template rendering, created without javascript frameworks.
 

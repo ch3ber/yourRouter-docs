@@ -3,34 +3,36 @@ sidebar_position: 3
 ---
 # Configuration
 
-Set the configuration of your Router using `createInstance()` method.
+Set the configuration of your Router using `create()` method.
 
 ## Create config
 
 ```js title="src/index.js"
-import { Router } from 'yourrouter'
+import Router from 'yourrouter'
 
-Router.createInstance({})
+const config = {
+// your config
+}
+
+Router.create(config)
 ```
 
 ### path404
-Name of route with 404 HTTP status code.
+
+If the router cannot find a route, the user will be redirected to the route for HTTP status code 404.
 
 ```js title="src/index.js"
-import { Router } from 'yourrouter'
-
-Router.createInstance({
+Router.create({
   path404: '/notFound'
 })
 ```
 
 ### renderId
-Id where the templates will be rendered. Use #app to id and .app to css class.
+
+Optional id where the templates will be rendered. `renderId` use `document.querySelector()` to find the id, you can use `#app` in your html file to select an id or `.app` to css class.
 
 ```js title="src/index.js"
-import { Router } from 'yourrouter'
-
-Router.createInstance({
+Router.create({
   renderId: '#app'
 })
 ```
