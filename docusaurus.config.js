@@ -33,14 +33,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          lastVersion: 'current',
+          lastVersion: '2.0.2',
           versions: {
-            'canary': {
+            current: {
               label: 'Canary 🚧',
               path: 'next',
               banner: 'unreleased'
             },
-            current: {
+            '2.0.2': {
               label: '2.0.2',
             },
             '1.1.2': {
