@@ -10,7 +10,7 @@ const config = {
   tagline: 'Your client-side router',
   url: 'https://ch3ber.github.io',
   baseUrl: '/yourRouter/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
@@ -33,15 +33,15 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          lastVersion: '2.0.2',
+          lastVersion: '2.0.3',
           versions: {
             current: {
               label: 'Canary 🚧',
               path: 'next',
               banner: 'unreleased'
             },
-            '2.0.2': {
-              label: '2.0.2',
+            '2.0.3': {
+              label: '2.0.3',
             },
             '1.1.2': {
               label: '1.1.2',
@@ -115,11 +115,11 @@ const config = {
               },
               {
                 label: 'API',
-                to: '/docs/category/api',
+                to: '/docs/category/api/addRoute',
               },
               {
                 label: 'Examples',
-                to: '/docs/category/examples',
+                to: '/docs/category/examples/devstore',
               },
             ],
           },

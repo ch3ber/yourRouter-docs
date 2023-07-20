@@ -1,6 +1,4 @@
-# Examples list
-
-## Devstore
+# Devstore
 SPA created without javascript frameworks
 
 - Repo: https://github.com/ch3ber/devstore
