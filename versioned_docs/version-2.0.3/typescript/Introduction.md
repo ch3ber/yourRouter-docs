@@ -12,7 +12,7 @@ All _yourrouter_ types can be found in `yourrouter/types`.
 import Router from "yourrouter";
 // highlight-next-line
 // Import types
-import { RouterConfig, Router } from "yourrouter/types";
+import { RouterConfig, Template } from "yourrouter/types";
 
 // highlight-next-line
 // Set the router config
