@@ -33,15 +33,15 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          lastVersion: '2.0.3',
+          lastVersion: '2.0.5',
           versions: {
             current: {
               label: 'Canary 🚧',
               path: 'next',
               banner: 'unreleased'
             },
-            '2.0.3': {
-              label: '2.0.3',
+            '2.0.5': {
+              label: '2.0.5',
             },
             '1.1.2': {
               label: '1.1.2',
